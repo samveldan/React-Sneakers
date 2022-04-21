@@ -1,0 +1,13 @@
+.header {
+    &__btns {
+        button {
+            font-family: 'Nunito';
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            &:last-child {
+                margin-left: 15px;
+            }
+        }
+    }
+}

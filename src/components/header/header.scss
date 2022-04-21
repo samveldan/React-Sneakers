@@ -1,0 +1,11 @@
+.header {
+    padding: 15px 0;
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__title {
+        font-size: 30px;
+    }
+}
