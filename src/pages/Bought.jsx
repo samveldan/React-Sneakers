@@ -1,9 +1,21 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
+import axios from "axios";
 import { AppContext } from "../components/app/App";
 import BoughtBlock from "../components/bought-block/bought-block";
 
 const Bought = ({title, data}) => {
     const {isLoading, emptyItems} = useContext(AppContext)
+    let [getBought, setGetBought] = useState();
+
+    useEffect(() => {
+        async function fetchData() {
+            let getData = await axios.get("https://6264015798095dcbf929fe3c.mockapi.io/bought");
+            setGetBought(getData.data);
+            console.log(getData.data)
+        }
+
+        fetchData();
+    }, [])
 
     return (
         <section className="sneakers">
@@ -22,7 +34,7 @@ const Bought = ({title, data}) => {
                     </div>
                 )
             })}
-            {data.length > 0 ? data.map((item, index) => {
+            {getBought && getBought.length > 0 ? getBought.map((item, index) => {
                 return <BoughtBlock
                 key={item.id}
                 data={item}

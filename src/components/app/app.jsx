@@ -104,7 +104,7 @@ const App = (e) => {
                 </Route>
             </Routes>
         </ AppContext.Provider>
-        <OrderContext.Provider value={{price, setPrice, orders, orderRef, setOrders, setBought, ordered, setOrdered}}>
+        <OrderContext.Provider value={{price, setPrice, orders, orderRef, setOrders, bought, setBought, ordered, setOrdered}}>
             <Order />
         </OrderContext.Provider>
         </main>

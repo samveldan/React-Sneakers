@@ -6,9 +6,10 @@ import OrderInfoBlock from "../oder-info-block/order-info-block";
 import "./order.scss";
 
 const Order = () => {
-    const {orders, price, setPrice, orderRef, setBought, setOrders, ordered, setOrdered} = useContext(OrderContext);
+    const {orders, price, setPrice, orderRef, bought, setOrders, ordered, setOrdered} = useContext(OrderContext);
     const [ordersLoading, setOrdersLoading] = useState(false);
     const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+    let [getBought, setGetBought] = useState(axios.get("https://6264015798095dcbf929fe3c.mockapi.io/bought").then(d => d.data));
 
     const removeOrderes = async () => {
         let getOrders = await axios.get("https://6264015798095dcbf929fe3c.mockapi.io/cart");
@@ -19,8 +20,9 @@ const Order = () => {
         }
     };
 
-    const postToBought = () => {
-        axios.post("https://6264015798095dcbf929fe3c.mockapi.io/bought", {orders});
+    const postToBought = async () => {
+        await axios.post("https://6264015798095dcbf929fe3c.mockapi.io/bought", {orders});
+        await setGetBought(await axios.get("https://6264015798095dcbf929fe3c.mockapi.io/bought").then(d => d.data));
     };
 
     const buyItems = async () => {
@@ -60,7 +62,7 @@ const Order = () => {
                         orderClass={"order-done"}
                         orderImg={"images/order-done.png"}
                         title={"Заказ оформлен"}
-                        titleInfo={"Ваш заказ #18 скоро будет передан курьерской доставке"}
+                        titleInfo={`Ваш заказ #${getBought[getBought.length - 1].id} скоро будет передан курьерской доставке`}
                         /> : orders.length == 0 && 
                         <OrderInfoBlock 
                            orderClass={"empty-cart"}
