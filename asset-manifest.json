@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/samveldan.github.io/React-Sneakers/static/css/main.46703152.css",
-    "main.js": "/samveldan.github.io/React-Sneakers/static/js/main.29e3db33.js",
-    "index.html": "/samveldan.github.io/React-Sneakers/index.html",
-    "main.46703152.css.map": "/samveldan.github.io/React-Sneakers/static/css/main.46703152.css.map",
-    "main.29e3db33.js.map": "/samveldan.github.io/React-Sneakers/static/js/main.29e3db33.js.map"
+    "main.css": "/React-Sneakers/static/css/main.46703152.css",
+    "main.js": "/React-Sneakers/static/js/main.29e3db33.js",
+    "index.html": "/React-Sneakers/index.html",
+    "main.46703152.css.map": "/React-Sneakers/static/css/main.46703152.css.map",
+    "main.29e3db33.js.map": "/React-Sneakers/static/js/main.29e3db33.js.map"
   },
   "entrypoints": [
     "static/css/main.46703152.css",
