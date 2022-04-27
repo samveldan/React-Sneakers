@@ -32,15 +32,15 @@ const Sneakers = ({title}) => {
                 <div className="sneakers__header">
                     <h1>{value.length > 0 ? `Поиск по запросу: "${value}"` : title}</h1>
                     <div className="sneakers__input-remove">
-                        <input value={value} onChange={handleValue} style={{"backgroundImage" : 'url("/images/search.svg")'}} type="text" placeholder="Поиск"/>
-                        {value.length > 0 ? <button onClick={clearInput} className="input-remove"><img src="/images/close-item.svg" alt=""/></button> : null}
+                        <input value={value} onChange={handleValue} style={{"backgroundImage" : 'url("images/search.svg")'}} type="text" placeholder="Поиск"/>
+                        {value.length > 0 ? <button onClick={clearInput} className="input-remove"><img src="images/close-item.svg" alt=""/></button> : null}
                     </div>
                 </div>
                 <div className="sneakers__wrapper">
                     {isLoading ? emptyItems() : renderItems()}
                     {value && filteredData.length == 0 ? <div className="not-found">
                         <div className="not-found__wrapper">
-                            <img src="/images/not-found.png" alt="" />
+                            <img src="images/not-found.png" alt="" />
                             <p>Таких кроссовок нет</p>
                         </div>
                     </div> : null}

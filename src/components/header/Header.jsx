@@ -7,7 +7,7 @@ const Header = ({price}) => {
             <div className="header__wrapper">
                 <Link to={"/"} className="logo-link">
                     <div className="header__logo">
-                        <img src="/images/logo.jpg" alt="" />
+                        <img src="images/logo.jpg" alt="" />
                         <div className="header__logo-info">
                             <h3>react sneakers</h3>
                             <span>Магазин лучших кроссовок</span>
@@ -17,21 +17,21 @@ const Header = ({price}) => {
                 <div className="header__info">
                     <div className="header__cart header__info-item">
                         <button>
-                            <img src="/images/cart.svg" alt="" />
+                            <img src="images/cart.svg" alt="" />
                         </button>
                         <span>{price} руб.</span>
                     </div>
                     <Link to={"/favorites"}>
                         <div className="header__heart header__info-item">
                             <button>
-                                <img src="/images/heart.svg" alt="" />
+                                <img src="images/heart.svg" alt="" />
                             </button>
                         </div>
                     </Link>
                     <Link to={"/bought"}>
                         <div className="header__person header__info-item">
                             <button>
-                                <img src="/images/person.svg" alt="" />
+                                <img src="images/person.svg" alt="" />
                             </button>
                         </div>
                     </Link>

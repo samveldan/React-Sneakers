@@ -23,7 +23,7 @@ const Favorites = ({title, data}) => {
                 }) :
                 <div className="not-found">
                     <div className="not-found__wrapper">
-                        <img src="/images/not-found.png" alt="" />
+                        <img src="images/not-found.png" alt="" />
                     <p>Тут нет закладок</p>
                     </div>
                 </div>}

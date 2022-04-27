@@ -22,7 +22,7 @@ const Bought = ({title, data}) => {
                     </div>
                 )
             })}
-            {data.length >= 0 ? data.map((item, index) => {
+            {data.length > 0 ? data.map((item, index) => {
                 return <BoughtBlock
                 key={item.id}
                 data={item}
@@ -30,7 +30,7 @@ const Bought = ({title, data}) => {
             }) :
             <div className="not-found">
                 <div className="not-found__wrapper">
-                    <img src="/images/not-found.png" alt="" />
+                    <img src="images/not-found.png" alt="" />
                 <p>Тут нет покупок</p>
                 </div>
             </div>}

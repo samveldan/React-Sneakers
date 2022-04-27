@@ -9,7 +9,7 @@ const OrderInfoBlock = ({orderClass, orderImg, title, titleInfo}) => {
             <p>{titleInfo}</p>
             <button>
                 <span>Вернуться назад</span>
-                <img src="/images/buy-arrow.svg" alt="" />
+                <img src="images/buy-arrow.svg" alt="" />
             </button>
         </div>
     );

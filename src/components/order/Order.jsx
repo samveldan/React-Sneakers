@@ -43,7 +43,7 @@ const Order = () => {
             <div className="order__items">
                 <h3 className="h3-styles order__items-title">Корзина</h3>
                 <div className={ordersLoading ? "order__items-wrapper loading" : "order__items-wrapper"}>
-                {ordersLoading && <img src="/images/Basketball.gif" className="loading-gif"/>}
+                {ordersLoading && <img src="images/Basketball.gif" className="loading-gif"/>}
                     {orders.length > 0 && 
                             orders.map(item => {
                                 return <OrderItem
@@ -58,13 +58,13 @@ const Order = () => {
                     {ordered ? 
                      <OrderInfoBlock 
                         orderClass={"order-done"}
-                        orderImg={"/images/order-done.png"}
+                        orderImg={"images/order-done.png"}
                         title={"Заказ оформлен"}
                         titleInfo={"Ваш заказ #18 скоро будет передан курьерской доставке"}
                         /> : orders.length == 0 && 
                         <OrderInfoBlock 
                            orderClass={"empty-cart"}
-                           orderImg={"/images/empty-cart.png"}
+                           orderImg={"images/empty-cart.png"}
                            title={"Корзина пустая"}
                            titleInfo={"Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ."}
                            />}
@@ -85,7 +85,7 @@ const Order = () => {
                                 </div>
                                 <button className={ordersLoading ? "order__btn disabled" : "order__btn"} onClick={buyItems} disabled={ordersLoading ? true : false}>
                                         <span>Оформить заказ</span>
-                                        <img src="/images/buy-arrow.svg" alt="" />
+                                        <img src="images/buy-arrow.svg" alt="" />
                                 </button>
                             </div>}
                         </div>

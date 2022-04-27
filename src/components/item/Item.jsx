@@ -6,7 +6,7 @@ import "./item.scss";
 const Item = ({title, price, src, item}) => {
     const {setPrice, orders, setOrders, important, setImportant, setOrdered} = useContext(AppContext)
 
-    let heartClass = "/images/no-hover-heart.svg";
+    let heartClass = "images/no-hover-heart.svg";
 
     let hasItem = orders.some(i => {
         if(i.current == item.current) return true;
@@ -16,11 +16,11 @@ const Item = ({title, price, src, item}) => {
     important.forEach(i => {
         if(i.current == item.current) {
             hasImportant = true;
-            heartClass = "/images/hover-heart.svg";
+            heartClass = "images/hover-heart.svg";
         }
     })
 
-    let imgSrc = "/images/no-active-add.svg";
+    let imgSrc = "images/no-active-add.svg";
 
     const addFavorite = e => {
         if(!hasImportant) {
@@ -42,21 +42,21 @@ const Item = ({title, price, src, item}) => {
     };
 
     orders.forEach(i => {
-        if(i.current == item.current) imgSrc = "/images/active-add.svg";
+        if(i.current == item.current) imgSrc = "images/active-add.svg";
     });
 
     const buyItem = e => {
         setOrdered(false);
         
         if(!hasItem) {
-            imgSrc = "/images/active-add.svg";
+            imgSrc = "images/active-add.svg";
             setOrders(items => [...items, item]);
             
             setPrice(p => p += parseInt(item.price.replace(" ", "")));
             axios.post("https://6264015798095dcbf929fe3c.mockapi.io/cart", item);
         }
         else {
-            imgSrc = "/images/no-active-add.svg";
+            imgSrc = "images/no-active-add.svg";
             setPrice(p => p -= parseInt(item.price.replace(" ", "")));
 
             setOrders(items => {

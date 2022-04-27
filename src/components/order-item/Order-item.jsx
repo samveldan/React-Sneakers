@@ -27,7 +27,7 @@ const OrderItem = ({title, item, price, src, current}) => {
                 <h3>{title}</h3>
                 <span>{price} руб.</span>
             </div>
-            <button onClick={removeFromOrder} className="order__item-close"><img src="/images/close-item.svg" alt="" /></button>
+            <button onClick={removeFromOrder} className="order__item-close"><img src="images/close-item.svg" alt="" /></button>
         </div>
     );
 }
