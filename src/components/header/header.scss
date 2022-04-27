@@ -1,0 +1,53 @@
+.logo-link {
+    text-decoration: none;
+    color: #000;
+}
+.header {
+    padding: 45px 0;
+    &__hr {
+        height: 1px;
+        background-color:  #EAEAEA;;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+        display: flex;
+        align-items: center;
+        &-info {
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+            h3 {
+                text-transform: uppercase;
+                font-size: 20px;
+                font-weight: 700;
+            }
+            span {
+                display: block;
+                color: #9D9D9D;
+                font-size: 14px;
+                margin-top: 5px;
+            }
+        }
+    }
+    &__info {
+        display: flex;
+        align-items: center;
+        &-item {
+            margin-left: 25px;
+        }
+    }
+    &__cart {
+        display: flex;
+        align-items: center;
+        span {
+            margin-left: 8px;
+            color: #5C5C5C;
+            font-weight: 600;
+            font-size: 14px;
+        }
+    }
+}
